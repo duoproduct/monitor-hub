@@ -13,7 +13,7 @@
       "env": {
         "MONITOR_DB_PATH": "/path/to/monitoring-system/monitoring.db",
         "SLACK_USER_ID": "YOUR_SLACK_USER_ID",
-        "SLACK_BOT_TOKEN": "xoxb-your-bot-token-here",
+        "SLACK_BOT_TOKEN": "your-slack-bot-token-here",
         "MONITOR_AUTH_TOKEN": "your-super-secret-token-here",
         "ALERT_TIMEOUT_HOURS": "24"
       },

@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "monitor-hub",
+      "script": "python",
+      "args": "-m uvicorn monitor_hub.app:app --host 0.0.0.0 --port 8000",
+      "cwd": "/path/to/monitoring-system",
+      "instances": 1,
+      "exec_mode": "fork",
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": "500M",
+      "env": {
+        "MONITOR_DB_PATH": "/path/to/monitoring-system/monitoring.db",
+        "SLACK_USER_ID": "YOUR_SLACK_USER_ID",
+        "SLACK_BOT_TOKEN": "xoxb-your-bot-token-here",
+        "MONITOR_AUTH_TOKEN": "your-super-secret-token-here",
+        "ALERT_TIMEOUT_HOURS": "24"
+      },
+      "error_file": "/var/log/monitor-hub-error.log",
+      "out_file": "/var/log/monitor-hub-out.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss"
+    }
+  ]
+}

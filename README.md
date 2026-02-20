@@ -68,8 +68,8 @@ Lightweight monitoring for autonomous Python agents. Silent unless broken.
 
 1. Open Slack → Right-click your name → **"Copy member ID"**
    - Or go to: https://api.slack.com/methods/auth.test/test
-   - Look for `"user_id": "U1234567890"`
-   - Save this: `U1234567890`
+   - Look for `"user_id"` in the response
+   - Save it to your `.env` file as `SLACK_USER_ID`
 
 ---
 
@@ -122,8 +122,8 @@ ALERT_TIMEOUT_HOURS=24
 MONITOR_DB_PATH=/opt/monitor-hub/monitoring.db
 
 # ===== SLACK (from Step 1) =====
-SLACK_BOT_TOKEN=xoxb-your-bot-token-here
-SLACK_USER_ID=U1234567890
+SLACK_BOT_TOKEN=your-actual-slack-bot-token
+SLACK_USER_ID=your-actual-user-id
 ```
 
 Generate secure auth token:
